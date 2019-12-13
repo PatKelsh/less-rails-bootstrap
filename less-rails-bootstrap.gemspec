@@ -17,9 +17,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.add_runtime_dependency     'less-rails', '>= 3.0'
 
-  gem.add_development_dependency 'minitest', '>= 4.0'
-  gem.add_development_dependency 'guard-minitest'
-  gem.add_development_dependency 'guard'
-  gem.add_development_dependency 'rails',  '>= 4.0'
   gem.add_development_dependency 'appraisal'
+  gem.add_development_dependency 'guard'
+  gem.add_development_dependency 'guard-minitest'
+  gem.add_development_dependency 'minitest', '>= 4.0'
+  gem.add_development_dependency 'rails',  '>= 4.0'
 end

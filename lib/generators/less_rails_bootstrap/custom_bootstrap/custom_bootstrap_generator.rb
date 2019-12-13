@@ -46,22 +46,17 @@ module LessRailsBootstrap
       end
 
       def insert_custom_less_files(lines)
-        lines.inject([]) do |result, line|
+        lines.each_with_object([]) do |result, line|
           result << line
-
           case line
             when /variables.less/
-              result << %Q(@import "custom_bootstrap/variables.less"; // Modify this for custom colors, font-sizes, etc\n)
+              result << %(@import "custom_bootstrap/variables.less"; // Modify this for custom colors, font-sizes, etc\n)
             when /mixins.less/
-              result << %Q(@import "custom_bootstrap/mixins.less"; // Modify this for custom mixins\n)
+              result << %(@import "custom_bootstrap/mixins.less"; // Modify this for custom mixins\n)
           end
-
           result
         end
       end
-
     end
   end
 end
-
-
